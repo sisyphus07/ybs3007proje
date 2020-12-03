@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" media = "(max-width:500px)" href="css/mobile.css">
+    
+    </head>
+<body>
+
+    <body class="bg-light">
+
+        <nav class="navbar navbar-expand-sm navbar-light " style="z-index: 2;">
+            <a href="#" class="navbar-brand"> <img src="images/luklog.png" class="brand-logo"></a>
+            <button class="navbar-toggler" data-toggle = "collapse" data-target = "#navbarNav" >
+                <span class="navbar-toggler-icon"  ></span>
+            </button>
+            <div class="collapse navbar-collapse" id = "navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Transferler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Turlar</a>
+                    </li>
+    
+    
+                </ul>
+    
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Login</a>
+                    </li>
+                </ul>
+    
+            </div>
+        </nav>
+
+        <div class="container-fluid head-wrap-trn" style="background-image: url('images/fly-back2.jpeg');">
+            <div class="continer">
+                <div class="row justify-content-center  sayfa-baslik">
+                    <div class="col-md-8">
+                       <h1>Excellent Services, Reasonable Prices, Luxury Vehicles</h1>
+                       <p>Airport transfers from Dalaman Airport or Antalya Airport to Patara, Kalkan, Kaş, Fethiye, Ölüdeniz, Göcek, Marmaris, İçmeler and many more,</p>
+                   </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-warp">
+
+                    <form action="https://www.lukkatravel.com/find-transfer" method="post">
+                      <input type="hidden" name="_token" value="8Bbg6Fk3UygZNX9JB8HpYxSf2zNKR1ZF1J1uWlWS">
+
+
+                      <div class="way-wrap">
+                          <div class="radioi">
+                              <label class="cont-r">Arrival
+                                  <input type="radio" class="yon_sec" checked="" name="trn_way" value="gelis">
+                                  <span class="checkmark"></span>
+                              </label>
+
+                          </div>
+                          <div class="radioi">
+                              <label class="cont-r">Depature
+                                  <input type="radio" class="yon_sec" name="trn_way" value="gidis">
+                                  <span class="checkmark"></span>
+                              </label>
+
+                          </div>
+                          <div class="radioi">
+                              <label class="cont-r">Round Trip
+                                  <input type="radio" class="yon_sec" name="trn_way" value="cift">
+                                  <span class="checkmark"></span>
+                              </label>
+
+                          </div>
+                      </div>
+
+
+                      <div class="form-row">
+                          <div class="col">
+                              <div class="form-group">
+                                <label for="FormControlSelect1">From</label>
+                                <select name="from" id="FormControlSelect1" class="form-control">
+                                    <option value="">Dalaman Airport</option>
+                                    <option value="">Antalya Airport</option>
+                                </select>
+                              </div>
+                              
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                                <label for="FormControlSelect2">To</label>
+                                <select name="to" id="FormControlSelect2" class="form-control">
+                                    <option value="">Kalkan</option>
+                                    <option value="">Kaş</option>
+                                    <option value="">Fethiye</option>
+                                    <option value="">Patara</option>
+                                    <option value="">Ölüdeniz</option>
+                                    <option value="">Hisarönü</option>
+                                    <option value="">Marmaris</option>
+                                    <option value="">İçmeler</option>
+
+                                </select>
+                              </div>
+                          </div>
+                          <div class="col">
+                              <label for="">Date</label>
+                            <input type="date" class="form-control" placeholder="Date">
+                          </div>
+                          <div class="col">
+                              <label for="">Time</label>
+                            <input type="time" class="form-control" placeholder="Time">
+                          </div>
+                          <div class="col">
+                              <label for="">Guests</label>
+                            <input type="number" class="form-control" placeholder="Guests">
+                          </div>
+
+                        </div>
+
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-success" style="margin: auto;">Find Transfers</button>
+                      </div>
+                      
+                    </form>
+            </div>
+
+        </div>
+    
+    
+</body>
+</html>

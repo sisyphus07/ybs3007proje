@@ -1,0 +1,105 @@
+.brand-logo {
+    height: 50px;
+}
+
+/* navbar */
+
+
+
+nav div ul li a {
+    color : white !important;
+    padding: 1rem !important;
+}
+
+nav div ul li a:hover {
+    background: #336ea2;
+    border-radius: 4px;
+}
+
+.box-1 {
+    height: 200px;
+
+
+}
+
+.box-2 {
+    height: 150px;
+    padding-top: 50px;
+}
+
+.box-3 {
+    height: 200px;
+}
+
+.slg-img-wrap img {
+    width: 72px;
+    text-align: right;
+    float: right;
+}
+
+
+.img-1 {
+    height: 100%;
+    width: auto;
+    display: flex;
+}
+
+.img-2 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.head-wrap-trn {
+    min-height: 480px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -120px;
+    position: relative;
+}
+
+
+.sayfa-baslik {
+    padding-top: 120px;
+    color: #fff;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+}
+
+.form-warp {
+    margin-top: 20px;
+}
+
+.way-wrap {
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+.radioi {
+    margin-right: 15px;
+}
+
+.cont-r {
+    font-size: 14px;
+}
+
+.inp-inline {
+    display: inline-flex;
+    width: 100%;
+}
+
+.input-wrap {
+    display: inline-flex;
+    width: 100%;
+}
+
+.inp-back {
+    padding: 7px;
+    width: 100%;
+    height: 60px;
+    border: 0px;
+    color: #78909C;
+    font-weight: 600;
+}
