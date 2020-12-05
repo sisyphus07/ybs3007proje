@@ -3,16 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Lukka Travel Agency</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" media = "(max-width:500px)" href="css/mobile.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        
+    
+        <style>
+            
+
+
+
+        </style>
+    
+    
+    
     
     </head>
-<body>
+<body class="bg-light">
 
-    <body class="bg-light">
+    
 
         <nav class="navbar navbar-expand-sm navbar-light " style="z-index: 2;">
             <a href="#" class="navbar-brand"> <img src="images/luklog.png" class="brand-logo"></a>
@@ -43,7 +56,7 @@
             </div>
         </nav>
 
-        <div class="container-fluid head-wrap-trn" style="background-image: url('images/fly-back2.jpeg');">
+        <div class="container-fluid head-wrap-trn" style="background-image: url('images/fly-back2.jpeg'); padding-bottom: 10px;">
             <div class="continer">
                 <div class="row justify-content-center  sayfa-baslik">
                     <div class="col-md-8">
@@ -61,21 +74,23 @@
                       <div class="way-wrap">
                           <div class="radioi">
                               <label class="cont-r">Arrival
-                                  <input type="radio" class="yon_sec" checked="" name="trn_way" value="gelis">
+                                  <input id="arrival" type="radio" class="yon_sec" name="trn_way" value="gelis" style="cursor:pointer" onclick="remove_classes()">
                                   <span class="checkmark"></span>
                               </label>
 
                           </div>
+                          
                           <div class="radioi">
-                              <label class="cont-r">Depature
-                                  <input type="radio" class="yon_sec" name="trn_way" value="gidis">
+                              <label class="cont-r">Departure
+                                  <input id="departure" type="radio" class="yon_sec" name="trn_way" value="gidis" style="cursor:pointer">
                                   <span class="checkmark"></span>
                               </label>
 
                           </div>
+                          
                           <div class="radioi">
                               <label class="cont-r">Round Trip
-                                  <input type="radio" class="yon_sec" name="trn_way" value="cift">
+                                  <input id="roundtrip" type="radio" class="yon_sec" checked="" name="trn_way" value="cift" style="cursor:pointer">
                                   <span class="checkmark"></span>
                               </label>
 
@@ -83,58 +98,283 @@
                       </div>
 
 
-                      <div class="form-row">
-                          <div class="col">
+                      <!-- Form 1 -->
+                      <div class="Form-1">
+                        <div id="form1" class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                  <label for="FormControlSelect1">From</label>
+                                  <select name="from" id="FormControlSelect1" class="form-control">
+                                      <option value="">Dalaman Airport</option>
+                                      <option value="">Antalya Airport</option>
+                                  </select>
+                                </div>
+                                
+                            </div>
+                            <div class="col">
                               <div class="form-group">
-                                <label for="FormControlSelect1">From</label>
-                                <select name="from" id="FormControlSelect1" class="form-control">
-                                    <option value="">Dalaman Airport</option>
-                                    <option value="">Antalya Airport</option>
-                                </select>
-                              </div>
-                              
+                                  <label for="FormControlSelect2">To</label>
+                                  <select name="to" id="FormControlSelect2" class="form-control">
+                                      <option value="">Kalkan</option>
+                                      <option value="">Kaş</option>
+                                      <option value="">Fethiye</option>
+                                      <option value="">Patara</option>
+                                      <option value="">Ölüdeniz</option>
+                                      <option value="">Hisarönü</option>
+                                      <option value="">Marmaris</option>
+                                      <option value="">İçmeler</option>
+  
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="">Arrival Date</label>
+                              <input type="date" class="form-control" placeholder="Date">
+                            </div>
+                            <div class="col">
+                                <label for="">Arrival Time</label>
+                              <input type="time" class="form-control" placeholder="Time">
+                            </div>
+                            <div class="col">
+                                <label for="">Guests</label>
+                              <input type="number" class="form-control" placeholder="Guests">
+                            </div>
+  
                           </div>
-                          <div class="col">
-                            <div class="form-group">
-                                <label for="FormControlSelect2">To</label>
-                                <select name="to" id="FormControlSelect2" class="form-control">
-                                    <option value="">Kalkan</option>
-                                    <option value="">Kaş</option>
-                                    <option value="">Fethiye</option>
-                                    <option value="">Patara</option>
-                                    <option value="">Ölüdeniz</option>
-                                    <option value="">Hisarönü</option>
-                                    <option value="">Marmaris</option>
-                                    <option value="">İçmeler</option>
-
-                                </select>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <label for="">Date</label>
-                            <input type="date" class="form-control" placeholder="Date">
-                          </div>
-                          <div class="col">
-                              <label for="">Time</label>
-                            <input type="time" class="form-control" placeholder="Time">
-                          </div>
-                          <div class="col">
-                              <label for="">Guests</label>
-                            <input type="number" class="form-control" placeholder="Guests">
-                          </div>
-
+  
                         </div>
+                      </div>
+                      
+                      
+                     
 
+                      <!-- Form 2 -->
+                      <div class="Form-2">
+                        <div id="form2" class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                  <label for="FormControlSelect1">From</label>
+                                  <select name="from" id="FormControlSelect1" class="form-control">
+                                      <option value="">Dalaman Airport</option>
+                                      <option value="">Antalya Airport</option>
+                                  </select>
+                                </div>
+                                
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                  <label for="FormControlSelect2">To</label>
+                                  <select name="to" id="FormControlSelect2" class="form-control">
+                                      <option value="">Kalkan</option>
+                                      <option value="">Kaş</option>
+                                      <option value="">Fethiye</option>
+                                      <option value="">Patara</option>
+                                      <option value="">Ölüdeniz</option>
+                                      <option value="">Hisarönü</option>
+                                      <option value="">Marmaris</option>
+                                      <option value="">İçmeler</option>
+    
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="">Departure Date</label>
+                              <input type="date" class="form-control" placeholder="Date">
+                            </div>
+                            <div class="col">
+                                <label for="">Departure Time</label>
+                              <input type="time" class="form-control" placeholder="Time">
+                            </div>
+                            <div class="col">
+                                <label for="">Guests</label>
+                              <input type="number" class="form-control" placeholder="Guests">
+                            </div>
+    
+                          </div>
+    
+                        </div>
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-success" style="margin: auto;">Find Transfers</button>
+                        </div>
                       </div>
-                      <div class="text-center">
-                        <button type="submit" class="btn btn-success" style="margin: auto;">Find Transfers</button>
-                      </div>
+
+                      
                       
                     </form>
             </div>
 
         </div>
+
+        <div class="container cont-araclar" >
+            <div class="row justify-content">
+                <div class="col-md-4">
+                    <div class="row pad5">
+                        <div class="my-row">
+                            <div class="note">
+                                <p>Please select a date to see prices and make a reservation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8" id = "resultRow">
+                    <div class="row" id = "headAlert">
+
+                    </div>
+                    <div class="row car-unit-row">
+                        <div class="col-md-3">
+                            <div class="cu-carname">
+                                <h3>Mercedes Vito 1-3 pax</h3>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6" >
+                            <div class="cu-resim-wrap">
+                                <img src="images/transfer vito.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="fiyat-wrap">
+                                <small>From</small>
+                                <b>40GBP</b>
+                                <br>
+                                <div class="note">
+                                    Please select a date to see prices and make reservations
+                                </div>
+                                <div class="arama-buton-wrap cu-buton-wrap">
+                                    <button class="btn btn-success" style="margin: auto;">Add</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row car-unit-row">
+                        <div class="col-md-3">
+                            <div class="cu-carname">
+                                <h3>Mercedes Vito 1-6 pax</h3>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="cu-resim-wrap">
+                                <img src="images/transfer vito.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="fiyat-wrap">
+                                <small>From</small>
+                                <b>50GBP</b>
+                                <br>
+                                <div class="note">
+                                    Please select a date to see prices and make reservations
+                                </div>
+                                <div class="arama-buton-wrap cu-buton-wrap">
+                                    <button class="btn btn-success" style="margin: auto;">Add</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="row car-unit-row">
+                        <div class="col-md-3">
+                            <div class="cu-carname">
+                                <h3>Mercedes Vito 1-16 pax</h3>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="cu-resim-wrap">
+                                <img src="images/201512415251793_premium-outside-bg.png" alt="" style="width: 330px; height: 153px;">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="fiyat-wrap">
+                                <small>From</small>
+                                <b>75GBP</b>
+                                <br>
+                                <div class="note">
+                                    Please select a date to see prices and make reservations
+                                </div>
+                                <div class="arama-buton-wrap cu-buton-wrap">
+                                    <button class="btn btn-success" style="margin: auto;">Add</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="footer" style="background: rgb(0, 178, 214) url('images/fo1.png')">
+        <div class="inner-footer">
+            <div class="logo-container">
+                <img src="images/luklog.png" class="brand-logo" alt="">
+            </div>
+            <div class="footer-third">
+                <h1>Services</h1>
+                <a href="#">Airport Transfers</a>
+                <a href="#">Shuttle Transfers</a>
+
+                
+            </div>
+            <div class="footer-third">
+                <h1>Tours</h1>
+                <a href="#">Daily Excursions</a>
+                <a href="#">Yacht Cruises</a>
+                <a href="#">Private Tours</a>
+                <a href="#">Anatolian Tours</a>
+                
+            </div>
+            <div class="footer-third">
+                <h1>Follow Us</h1>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                
+        
+                
+            </div>
+        </div>
+    </div>
     
-    
+        <script>
+               $(function () {
+        $("#arrival").click(function () {
+            if ($(this).is(":checked")) {
+                $("#form1").show();
+                $("#form2").hide();
+            }
+        });
+    }); 
+
+        $(function () {
+            $("#departure").click(function () {
+            if ($(this).is(":checked")) {
+                $("#form2").show();
+                $("#form1").hide();
+            }
+        });
+    });
+
+        $(function () {
+            $("#roundtrip").click(function () {
+                if ($(this).is(":checked")) {
+                    $("#form1 , #form2").show();
+                    
+                }
+            });
+        });
+        </script>
+
+        
 </body>
 </html>
